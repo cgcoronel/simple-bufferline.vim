@@ -40,5 +40,5 @@ endfunction
 if !exists('g:simple_bufferline_prev') | let g:simple_bufferline_prev= 'm' | en
 if !exists('g:simple_bufferline_next') | let g:simple_bufferline_next= '.' | en
 
-exe 'map ' g:simple_bufferline_next ' :call BufferList("n")<CR>'
 exe 'map ' g:simple_bufferline_prev ' :call BufferList("p")<CR>'
+exe 'map ' g:simple_bufferline_next ' :call BufferList("n")<CR>'
