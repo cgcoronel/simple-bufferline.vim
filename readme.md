@@ -5,9 +5,7 @@
 Use 'm' to move previous buffer and '.' to move next buffer. This plugin only native buffer and minimalist interface.
 
 ## Example
-```vim
-Buf> package.lock [index.js] readme.md
-```
+<img src="https://github.com/cgcoronel/simple-bufferline.vim/blob/main/1.jpeg" width="300" height="80">
 
 ## Install
 
