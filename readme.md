@@ -2,7 +2,7 @@
 
 > Minimal plugin that show and move between tabs buffer in vim
 
-Use 'm' to move previous buffer and '.' to move next tab. This plugin only native buffer and minimalist interface.
+Use 'm' to move previous buffer and '.' to move next buffer. This plugin only native buffer and minimalist interface.
 
 [![asciicast](https://asciinema.org/a/c9Y2mbgcgef2PXhsWQIa4mlFX.svg)](https://asciinema.org/a/c9Y2mbgcgef2PXhsWQIa4mlFX)
 
