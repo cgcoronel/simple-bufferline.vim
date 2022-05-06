@@ -5,7 +5,7 @@
 Use 'm' to move previous buffer and '.' to move next buffer. This plugin only native buffer and minimalist interface.
 
 ## Example
-<img src="https://github.com/cgcoronel/simple-bufferline.vim/blob/main/1.jpeg" width="500" height="130">
+<img src="https://github.com/cgcoronel/simple-bufferline.vim/blob/main/1.jpeg" width="500" height="200">
 
 ## Install
 
