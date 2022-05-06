@@ -27,11 +27,6 @@ let g:simple_bufferline_next= '.'
 let g:simple_bufferline_sel_open= '['
 let g:simple_bufferline_sel_close= ']'
 ```
-
-" Use ctrl+t for close 
-let g:simple_term_close= '<c-t>'
-```
-
 ## Related
 
 * [My dotfiles](https://github.com/cgcoronel/vim-setup)
