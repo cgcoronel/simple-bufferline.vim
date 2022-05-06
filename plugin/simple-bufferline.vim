@@ -1,6 +1,12 @@
 if !exists('g:simple_bufferline_sel_open') | let g:simple_bufferline_sel_open= '[' | en
 if !exists('g:simple_bufferline_sel_close') | let g:simple_bufferline_sel_close= ']' | en
 
+if !exists('g:simple_bufferline_prev') | let g:simple_bufferline_prev= 'm' | en
+if !exists('g:simple_bufferline_next') | let g:simple_bufferline_next= '.' | en
+
+exe 'map ' g:simple_bufferline_next ' :call BuferList("n")<CR>'
+exe 'map ' g:simple_bufferline_prev ' :call SimpleTerm("p")<CR>'
+
 function! BufferList(p = 'n')
     if a:p == 'n' 
       :silent bnext
