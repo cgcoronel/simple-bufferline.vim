@@ -27,9 +27,6 @@ let g:simple_bufferline_next= '.'
 " Customize selector
 let g:simple_bufferline_sel_open= '['
 let g:simple_bufferline_sel_close= ']'
-
-" Customize highlight color
-let g:simple_bufferline_sel_color= 'Search'
 ```
 
 #
