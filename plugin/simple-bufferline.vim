@@ -1,6 +1,5 @@
 if !exists('g:simple_bufferline_sel_open') | let g:simple_bufferline_sel_open= '[' | en
 if !exists('g:simple_bufferline_sel_close') | let g:simple_bufferline_sel_close= ']' | en
-if !exists('g:simple_bufferline_sel_color') | let g:simple_bufferline_sel_color= 'Search' | en
 
 function! BufferList(p = 'n')
     if a:p == 'n' 
@@ -32,7 +31,7 @@ function! BufferList(p = 'n')
         endif
 
         if expand('%:t') == name
-          echohl g:simple_bufferline_sel_color 
+          echohl Search 
           echon g:simple_bufferline_sel_open . name . g:simple_bufferline_sel_close 
           echohl None
         else
