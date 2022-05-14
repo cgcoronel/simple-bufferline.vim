@@ -11,7 +11,7 @@ function! BufferList(p = 'n')
     let l:blist = getbufinfo()
 
     echohl Normal
-    echo 'Buf> '
+    echo 'Buffers> '
     echohl None
 
     for l:item in l:blist
