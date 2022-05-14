@@ -9,7 +9,10 @@ function! BufferList(p = 'n')
     endif
 
     let l:blist = getbufinfo()
-    let bar = 'Buf> '
+
+    echohl Normal
+    echo 'Buf> '
+    echohl None
 
     for l:item in l:blist
         if l:item.listed == 0 | continue | endif
@@ -28,13 +31,15 @@ function! BufferList(p = 'n')
         endif
 
         if expand('%:t') == name
-          let bar = bar . g:simple_bufferline_sel_open . name . g:simple_bufferline_sel_close 
+          echohl Search 
+          echon g:simple_bufferline_sel_open . name . g:simple_bufferline_sel_close 
+          echohl None
         else
-          let bar = bar . ' ' . name . ' '
+            echohl Normal 
+            echon ' ' . name . ' '
+            echohl None
         endif
     endfor
-
-    echo bar 
 endfunction
 
 if !exists('g:simple_bufferline_prev') | let g:simple_bufferline_prev= 'm' | en
