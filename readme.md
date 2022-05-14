@@ -1,6 +1,6 @@
 # Simple Buffer line for VIM
 
-> Minimal plugin that show in status bar and move between tabs buffer in vim
+> Minimal plugin that show in status bar and move between tabs buffer in vim, only show when you move between buffers.
 
 Use 'm' to move previous buffer and '.' to move next buffer. This plugin only native buffer and minimalist interface.
 
