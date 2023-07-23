@@ -31,7 +31,7 @@ function! BufferList(p = 'n')
         endif
 
         if expand('%:t') == name
-          echohl Visual 
+          echohl Search 
           echon g:simple_bufferline_sel_open . name . g:simple_bufferline_sel_close 
           echohl None
         else
