@@ -1,13 +1,13 @@
 if !exists('g:simple_bufferline_sel_open') | let g:simple_bufferline_sel_open= '[' | en
 if !exists('g:simple_bufferline_sel_close') | let g:simple_bufferline_sel_close= ']' | en
 
-function! BufferList(p = 'n')
-    if a:p == 'n' 
-      :silent bnext
-    else
-      :silent bprevious
+function! BufferList(direction = 'next')
+    if &filetype == 'netrw'
+      exe ":bdelete!"
     endif
 
+    exe a:direction == "next" ? ":bnext" : ":bprev"
+   
     let l:blist = getbufinfo()
 
     echohl Normal
@@ -27,17 +27,17 @@ function! BufferList(p = 'n')
         endif  
 
         if name == 'NERD_tree_1' || name == 'index'
-          continue
+         continue
         endif
-
+	
         if expand('%:t') == name
           echohl Search 
           echon g:simple_bufferline_sel_open . name . g:simple_bufferline_sel_close 
           echohl None
         else
-            echohl Normal 
-            echon ' ' . name . ' '
-            echohl None
+          echohl Normal 
+          echon ' ' . name . ' '
+          echohl None
         endif
     endfor
 endfunction
@@ -45,5 +45,5 @@ endfunction
 if !exists('g:simple_bufferline_prev') | let g:simple_bufferline_prev= 'm' | en
 if !exists('g:simple_bufferline_next') | let g:simple_bufferline_next= '.' | en
 
-exe 'map ' g:simple_bufferline_prev ' :call BufferList("p")<CR>'
-exe 'map ' g:simple_bufferline_next ' :call BufferList("n")<CR>'
+exe 'map ' g:simple_bufferline_prev ' :call BufferList("prev")<CR>'
+exe 'map ' g:simple_bufferline_next ' :call BufferList("next")<CR>'
